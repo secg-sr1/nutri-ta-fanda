@@ -228,8 +228,9 @@ import DietaryFeedback from './DietaryFeedback';
 import DietGoalsSelector from './DietGoalsSelector';
 import DietaryTips from './DietaryTips';
 
-const backendURL = import.meta.env.VITE_BACKEND_URL;
-// console.log(backendURL);
+// const backendURL = import.meta.env.VITE_BACKEND_URL;
+const backendURL = import.meta.env.VITE_BACKEND_URL || '/api';
+console.log(backendURL);
 
 const videoConstraints = {
   facingMode: 'environment',
