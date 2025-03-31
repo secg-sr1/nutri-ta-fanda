@@ -1,0 +1,8 @@
+{
+    "name": "my-nutrition-app",
+    "private": true,
+    "workspaces": [
+      "frontend",
+      "api"
+    ]
+  }
