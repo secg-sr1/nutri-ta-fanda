@@ -228,6 +228,8 @@ import DietaryFeedback from './DietaryFeedback';
 import DietGoalsSelector from './DietGoalsSelector';
 import DietaryTips from './DietaryTips';
 
+const backendURL = import.meta.env.VITE_BACKEND_URL;
+
 const videoConstraints = {
   facingMode: 'environment',
 };
@@ -267,7 +269,7 @@ const CaptureAndVisualize = () => {
   const analyzePhoto = async () => {
     try {
       setLoading(true);
-      const res = await axios.post('http://localhost:4000/analyze', { base64Image: imageSrc });
+      const res = await axios.post(`${backendURL}/analyze`, { base64Image: imageSrc });
       setNutritionData(res.data.data);
       setLoading(false);
     } catch (err) {
